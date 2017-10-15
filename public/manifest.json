@@ -1,0 +1,6 @@
+{
+  "short_name": "Car Components React App",
+  "name": "Create React App Sample",
+  "start_url": "./index.html",
+  "display": "standalone"
+}

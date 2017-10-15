@@ -1,0 +1,14 @@
+.componentText, .vehicleText {
+  color:#d6d6d6;
+  display: block;
+position:relative;
+font-size:14px;
+}
+
+.vehicleText{
+	  text-align: left;
+}
+
+.componentText{
+text-align:right;
+}

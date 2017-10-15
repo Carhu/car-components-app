@@ -1,0 +1,9 @@
+{
+  "Door Locks": ["Car X", "Vehicle X", "Van X", "Bus X"],
+  "Trunk Access": ["Bus X"],
+  "Diagnostics": ["Van X", "Bus X"],
+  "Lights": ["Car X", "Vehicle X"],
+  "Rooftop Control": ["Car X", "Vehicle X"],
+  "Parking Ticket": ["Car X", "Vehicle X", "Van X", "Bus X"],
+  "Headunit Browser": ["Vehicle X", "Ride X", "Bus X"]
+}
