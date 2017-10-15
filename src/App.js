@@ -9,7 +9,7 @@ class App extends Component {
         <header className="App-header">
           <h1 className="App-title">Car Components Chart</h1>
         </header>
-        <div>
+        <div className="App-content">
         <CarCapabilityChart/>
         </div>
       </div>

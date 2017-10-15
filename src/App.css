@@ -1,3 +1,10 @@
+html,
+    body {
+      margin: 0;
+      height: 100%;
+      width: 100%;
+    }
+
 .App {
   text-align: center;
 }
@@ -7,8 +14,15 @@
   height: 10%;
   padding: 20px;
   color: white;
+  position: fixed;
+      width: 100%;
 }
 
 .App-title {
   font-size: 1.5em;
+}
+
+.App-content{
+	position: absolute;
+      width: 100%;
 }
