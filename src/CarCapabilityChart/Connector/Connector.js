@@ -33,13 +33,13 @@ var posComponent = {
     x: 700 - horizontalPadding,
     y: endingElPosTop  + (endingIdx+1)*strokeWidth + listItemsPadding
   };
- var dStr =
-      "M" +
-      (posComponent.x      ) + "," + (posComponent.y) + " " +
-      "C" +
-      (posComponent.x + 100) + "," + (posComponent.y) + " " +
-      (posVehicle.x - 100) + "," + (posVehicle.y) + " " +
-      (posVehicle.x      ) + "," + (posVehicle.y);
+ var dStr = 
+     "M" +
+     (posComponent.x      ) + "," + (posComponent.y) + " " +
+     "C" +
+     (posComponent.x + 100) + "," + (posComponent.y) + " " +
+     (posVehicle.x - 100) + "," + (posVehicle.y) + " " +
+     (posVehicle.x      ) + "," + (posVehicle.y);
 
       return dStr;
 
@@ -54,11 +54,11 @@ function stylePathElement(element, style){
 
 function styleElements(_self, style){
 	var startingElement = document.querySelector("#"+convertToKebabCase(_self.props.startingLabel));
-var endingElement = document.querySelector("#"+convertToKebabCase(_self.props.endingLabel));
-var connectorElement = _self.refs.connector;
-styleTextElement(startingElement, style);
-styleTextElement(endingElement,style);
-stylePathElement(connectorElement,style);
+	var endingElement = document.querySelector("#"+convertToKebabCase(_self.props.endingLabel));
+	var connectorElement = _self.refs.connector;
+	styleTextElement(startingElement, style);
+	styleTextElement(endingElement,style);
+	stylePathElement(connectorElement,style);
 }
 
 class Connector extends Component {
@@ -69,12 +69,12 @@ class Connector extends Component {
 		};
 		styleElements(_self, style);
 	}
-		onMouseleave(_self){
-			var style ={
-				color: "#d6d6d6",
-				fontWeight:"normal"
-			};
-			styleElements(_self, style);
+	onMouseleave(_self){
+		var style ={
+			color: "#d6d6d6",
+			fontWeight:"normal"
+		};
+		styleElements(_self, style);
 	}
 	render() {
 		return (
