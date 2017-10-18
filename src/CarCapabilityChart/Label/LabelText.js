@@ -2,10 +2,10 @@ import React, { Component } from 'react';
 import './LabelText.css';
 
 function getPadding(numberOfTies){
-var strokeSize = 10;
-var initialPadding = 5;
-var padding = initialPadding + strokeSize*((numberOfTies-1)/2);
-return padding +"px 0";
+  var strokeSize = 10;
+  var initialPadding = 5;
+  var padding = initialPadding + strokeSize*((numberOfTies-1)/2);
+  return padding +"px 0";
 }
 
 function convertToKebabCase(string){
