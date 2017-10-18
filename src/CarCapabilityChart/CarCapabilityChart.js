@@ -23,30 +23,29 @@ function getNumberOfVehicleTies(vehiclesArr,vehicle){
 
 function getVehicles(components){
 	var vehiclesArr = _.flatMap(components, (component) =>{
-    		return component.value;
+		return component.value;
     	});
-
-    var uniqueVehicles = vehiclesArr.filter(function(item, pos){
-  			return vehiclesArr.indexOf(item) === pos; 
+	
+	var uniqueVehicles = vehiclesArr.filter(function(item, pos){
+		return vehiclesArr.indexOf(item) === pos; 
 	});
-
-  var vehicles = uniqueVehicles.map((vehicle)=>{
-  	var count = getNumberOfVehicleTies(vehiclesArr, vehicle);
-  	return{
-  		numberOfTies: count,
-  		name: vehicle,
-  		countTies: 0
-  	};
-  })
-
-const sortedVehicles = _.sortBy(vehicles, 'numberOfTies').reverse();
-return sortedVehicles;
+	var vehicles = uniqueVehicles.map((vehicle)=>{
+		var count = getNumberOfVehicleTies(vehiclesArr, vehicle);
+		return{
+			numberOfTies: count,
+			name: vehicle,
+			countTies: 0
+		};
+	});
+	
+	const sortedVehicles = _.sortBy(vehicles, 'numberOfTies').reverse();
+	return sortedVehicles;
 }
 
 function getComponents(components){
 	return components.map((component) => {
-  		return {
-  			numberOfTies: component.value.length,
+		return {
+			numberOfTies: component.value.length,
   			name: component.key
   		};
   	});
@@ -55,18 +54,18 @@ function getComponents(components){
 function getSortingIdxsOfVehicles(vehiclesAndTies, vehicle){
 	var endingIdxs = [];
 	vehiclesAndTies.forEach((v) =>{
-    				if(v.name === vehicle){
-    					endingIdxs.push(_.clone(v.countTies));
-    					v.countTies ++;
-    				}
-    			});
+		if(v.name === vehicle){
+			endingIdxs.push(_.clone(v.countTies));
+			v.countTies ++;
+		}
+	});
 	return endingIdxs;
 }
 
 class CarCapabilityChart extends Component {
     constructor(){
     	super();
-    	var data = JSON.parse(JSON.stringify(carDataSet))
+    	var data = JSON.parse(JSON.stringify(carDataSet));
     	var sortedComponents = sortDataByValueLength(data);
     	
     	const vehicles = getVehicles(sortedComponents);
@@ -82,8 +81,8 @@ class CarCapabilityChart extends Component {
     showLabels(labelItems, childClass){
     	return labelItems.map((item)=>{
     		return (
-    			<LabelText key={item.name} item={item} childClass={childClass}></LabelText>
-    			);
+			<LabelText key={item.name} item={item} childClass={childClass}></LabelText>
+		);
     	});
     }
     showConnectors(){
